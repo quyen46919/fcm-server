@@ -20,6 +20,10 @@ app.listen(port, () => {
   console.log(`Server running at port ${port}`);
 });
 
+app.get('/', (req, res) => {
+    res.status(200).send('Server is running');
+})
+
 app.post('/fcm', async (req, res, next) => {
     try {
         var message = {
